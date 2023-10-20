@@ -101,4 +101,4 @@ The complex SQL query used in this project performs the following operations:
     {'Date': datetime.date(2023, 9, 3), 'Product': 'Cherry', 'Price': 2.6, 'Quantity': 19, 'Discount': None, 'Total_Revenue': None}
     ```
 
-[![example workflow](https://github.com/nogibjj/IDS706_MiniProj6_YangXu/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706_MiniProj6_YangXu/actions/workflows/cicd.yml)
+[![example workflow](https://github.com/nogibjj/IDS706_MiniProj7_YangXu/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706_MiniProj7_YangXu/actions/workflows/cicd.yml)

@@ -3,12 +3,12 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --nbval --cov=script --cov=mylib test_*.py
+	python3 -m pytest -vv --nbval --cov=script --cov=mini_proj_7 **/test_*.py
 
 format:
-	black *.py
+	black *.py **/*.py
 
 lint:
-	ruff check *.py
+	ruff check *.py **/*.py
 
 all: install lint format test

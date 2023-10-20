@@ -1,6 +1,6 @@
 # import pymysql.cursors
 # import pandas as pd
-from main import (
+from mini_proj_7.main import (
     connect_db,
     create_tables_if_not_exists,
     clear_table,

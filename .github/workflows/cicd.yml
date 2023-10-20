@@ -26,6 +26,8 @@ jobs:
       run: pip install -e .
     - name: Install Ruff
       run: pip install ruff
+    - name: Install nbval plugin
+      run: pip install nbval
     - name: Lint
       run: make lint
     - name: Test with pytest

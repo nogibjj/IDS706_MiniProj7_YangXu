@@ -2,19 +2,21 @@
 
 ## Project Overview
 
-This project showcases complex SQL queries using an external Azure MySQL database. The goal is to demonstrate proficiency in constructing SQL queries that involve operations like joins, aggregation, and sorting. The project further integrates Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate testing and formatting processes.
+This project packages a Python script into a command-line tool. It showcases complex SQL queries using an external Azure MySQL database. The goal is to demonstrate proficiency in constructing SQL queries and creating a Python package that can be installed and run as a command-line tool. The project also integrates Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate testing and formatting processes.
 
 ## Table of Contents
 
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
-- [Setting Up](#setting-up)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Complex Query Explanation](#complex-query-explanation)
 - [Sample Output](#sample-output)
 
 ## Project Structure
 
 ```bash
-IDS706_MiniProj6_YangXu (Root Directory)
+IDS706_MiniProj7_YangXu (Root Directory)
 │
 ├── .devcontainer
 │ ├── Dockerfile
@@ -24,17 +26,24 @@ IDS706_MiniProj6_YangXu (Root Directory)
 │ └── workflows
 │ └── cicd.yml
 │
-├── .env
+├── mini_proj_7
+│ ├── __init__.py
+│ ├── main.py
+│ └── dataset_sample.csv
 │
-├── env.example
+├── tests
+│ ├── __init__.py
+│ └── test_main.py
 │
 ├── config.py
 │
 ├── dataset_sample.csv
 │
-├── main.py
+├── setup.py
 │
-├── test_main.py
+├── .env
+│
+├── env.example
 │
 ├── requirements.txt
 │
@@ -56,7 +65,7 @@ This project uses several libraries and tools which are listed in the `requireme
 - Code linting: `pylint`.
 - Database: `pymysql`, `psycopg2-binary`, and `python-dotenv`.
 
-## Setting Up
+## Installation
 
 1. Clone this repository.
 2. Create a `.env` file using `env.example` as a template. Fill in your database credentials.
@@ -64,9 +73,16 @@ This project uses several libraries and tools which are listed in the `requireme
     ```bash
     pip install -r requirements.txt
     ```
-4. Run the main script to execute the complex SQL queries:
+4. nstall the tool:
     ```bash
-    python main.py
+    pip install -e .
+    ```
+
+## Usage
+
+After installation, you can run the command-line tool using:
+    ```bash
+    mini-proj7
     ```
 
 ## Complex Query Explanation

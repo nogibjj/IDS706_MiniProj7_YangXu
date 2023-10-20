@@ -1,3 +1,4 @@
+import click
 import pymysql.cursors
 import pandas as pd
 from config import get_db_config
@@ -112,17 +113,35 @@ def complex_query(connection):
         print(f"Error performing complex query: {e}")
 
 
-def main():
-    # Main execution flow.
-    # Connect to the database, set up tables, clear previous data,
-    # insert new data, and run the complex query.
+# def main():
+#     # Main execution flow.
+#     # Connect to the database, set up tables, clear previous data,
+#     # insert new data, and run the complex query.
+#     connection = connect_db()
+#     create_tables_if_not_exists(connection)
+#     clear_table(connection)
+#     insert_data_from_csv(connection)
+#     complex_query(connection)
+#     connection.close()
+
+
+# if __name__ == "__main__":
+#     main()
+
+@click.group()
+def cli():
+    pass
+
+@cli.command()
+@click.option('--filepath', default="dataset_sample.csv", help='Path to the input CSV file.')
+def run(filepath):
+    """Execute the main script."""
     connection = connect_db()
     create_tables_if_not_exists(connection)
     clear_table(connection)
-    insert_data_from_csv(connection)
+    insert_data_from_csv(connection, filepath)
     complex_query(connection)
     connection.close()
 
-
 if __name__ == "__main__":
-    main()
+    cli()

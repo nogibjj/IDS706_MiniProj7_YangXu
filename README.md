@@ -1,4 +1,4 @@
-# IDS706_MiniProj6_YangXu
+# IDS706_MiniProj7_YangXu
 
 ## Project Overview
 
